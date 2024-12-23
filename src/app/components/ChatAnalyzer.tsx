@@ -82,7 +82,7 @@ import { parseChat } from '../utils/parser';
     </div>
   );
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label }: unknown) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg">
