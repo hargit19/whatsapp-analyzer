@@ -2,7 +2,7 @@
 
 // src/components/ChatAnalyzer.tsx
 import React, { useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,TooltipProps } from 'recharts';
 import { AnalysisResult, ChatMessage } from '../types/types';
 import { parseChat } from '../utils/parser';
   
@@ -82,7 +82,7 @@ import { parseChat } from '../utils/parser';
     </div>
   );
 
-const CustomTooltip = ({ active, payload, label }: unknown) => {
+const CustomTooltip = ({ active, payload, label }: TooltipProps<number, string>) => {
   if (active && payload && payload.length) {
     return (
       <div className="bg-gray-800 border border-gray-700 p-4 rounded-lg shadow-lg">
