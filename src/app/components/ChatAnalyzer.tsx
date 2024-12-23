@@ -5,11 +5,6 @@ import React, { useState } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { AnalysisResult, ChatMessage } from '../types/types';
 import { parseChat } from '../utils/parser';
-
-const findUrls = (text: string): string[] => {
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    return text.match(urlRegex) || [];
-  };
   
   const MessageContent = ({ content }: { content: string }) => {
     const [hoveredLink, setHoveredLink] = useState<string | null>(null);
